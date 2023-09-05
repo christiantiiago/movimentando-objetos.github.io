@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movimentando objetos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-image: url(img/oin.jpg);
+            
+        }
+        .game-container {
+            position: relative;
+            margin-top: 45px; /* Ajuste a posição vertical aqui */
+            margin-left: 25%; /* Ajuste a posição horizontal aqui */
+        }
+        #objetoNaoIdentificado {
+            background-image: url(img/cc2b8d011fb9be1ffb324130ef8d07b7-ilustracao-ovni-alienigena.png);
+            background-size: contain;
+            position: absolute;
+            top: 0;
+            left: 30px;
+            width: 25px;
+            height: 25px;
+            transition: left 0.1s, top 0.1s;
+            z-index: 2;
+        }
+        h1 {
+            background-image: linear-gradient(to right, black, green);
+            text-align: center;
+            color: darkseagreen;
+        }
+        canvas {
+            border: 0px solid black;
+            position: absolute;
+            z-index: 1;
+        }
+        #mazeCanvas{
+            width: 700px;
+            height:700px; 
+            margin-left: -5px;
+            margin-top: -3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Movimentando Objetos</h1>
+    <div class="game-container">
+        <canvas id="mazeCanvas" width="700" height="700" style="margin-left: -5px;"></canvas>
+        <span id="objetoNaoIdentificado"></span>
+    </div>
+    <div id="timer">Tempo: 0 segundos</div>
+    <script src="exercicio.js"></script>
+</body>
+</html>
+
